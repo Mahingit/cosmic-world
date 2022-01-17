@@ -74,6 +74,19 @@ nav{
     align-items: center;
     /* align item: center korte hole must height thakte/dite hobe, height chara hoyna */
 }
+
+/* Navbar */
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+/* navbar ba icon boro screen a dekhabena */
+
+
 header{
     /* height: 100vh;
     eta background image shurute jeno pura page a thake tai disilam ekhon content boshano hoise so eta r dorkar nai */
@@ -106,6 +119,8 @@ header{
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 80px);
     /* 100vh mane full ekta page scrol chara r 80 px hoilo nav bar er height so total naav bar and banner milay 100vh korsi */
+    min-height: 500px;
+    /* shudhu 100vh thakle responsive korlei mean choto korle ekdomi upore uthe jacche tai min height diye disi  */
 }
 .banner-left{
     display: flex;
@@ -216,4 +231,72 @@ justify-content: center;
     outline: 0;
     /* click korle pop up color off korar jonno */
     border: 1px solid #FF008E;
+}
+
+/* Footer CSS  */
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Responsiveness CSS */
+@media (max-width: 950px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    .banner-left h1{
+        font-size: 35px;
+    }
+}
+@media (max-width: 800px) {
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+        /* backgnd image height aro choto hoye jacche tai fit content kore disi */
+    }
+    .banner-left{
+        order: 2;
+        /* text gulake image er por pathaye disi  */
+        padding: 50px 0;
+    }
+    .feature, .gallery, .contact{
+        grid-template-columns: 1fr;
+    }
+    .photo img{
+        max-width: 350px;
+        /* etar por image ek side hoye gese so image er parent mane photo class k text alighn korbo */
+    }
+    .photo{
+        text-align: center;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        /* choto screen er jonno nav menu gula daane absolute korlam jeno logo baame r toggler icon dane jay */
+        top: 80px;
+        /* logo er nche mane navigation height chilo 80px oitar niche ansi */
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        /* upore niche ansi  */
+        align-items: center;
+        background-color: white;
+        padding: 20px 0;
+        transform: translateY(-330px);
+        /* normaly minus kore site er upore mane baire shoray rakhsi */
+        transition: .5s ease-in-out;
+    }
+    .navigation li a{
+        color: black;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+        /* ~ icon diye sibling der k under akaj korano jay,  */
+    }
+    
 }
