@@ -1,0 +1,178 @@
+/* Common Style  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap')
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-----------------
+ COMMON CS
+------------------- */
+
+/* duipashe margin korar jonno .container name common ekta class nicchi  */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;  
+    /* upore niche 0 nibe r daane-bame auto mane always center a thakbe */
+    padding: 0 100px;
+    /* 1200px er nicher device a jeno gaye gaye na lage tai padding, upore niche lagbena tai 0 */
+}
+.highlight{
+    color: #FF008E;
+}
+.primary-button{
+    outline: 0; 
+    /* button er outline remove korsi */
+    border: 0;
+    padding: 15px 20px;
+    /* upore niche 15 dane bame 20 */
+    background-image: linear-gradient(90deg, #861151, #FF008E);
+    /* The values to top, to bottom, to left, and to right are equivalent to the angles 0deg, 180deg, 270deg, and 90deg, respectively. The other values are translated into an angle. */
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    /* shob lekha uppercase korsi */
+    border-radius: 5px;
+    cursor: pointer;
+    /* cursor nile poiner hobe */
+    box-shadow: 0 7px 0 #a3085b;
+    /* click korle ektu moove korar jonno- position relative korle default a top theke 0 kore rakhi */
+    position: relative;
+    top: 0;
+}
+.primary-button:active{
+    top: 5px;
+    box-shadow: 0 2px 0 #a3085b;
+    /* pseudo box for mouse click */
+}
+.section-title{
+    text-align: center;
+    /* jehetu h2 k inline block kora hoise tai eta parent er deya css niye center hoise */
+}
+.section-title h2{
+    font-size: 30px;
+    border-bottom: 2px solid #FF008E;
+    margin: 50px;
+    text-transform: uppercase;
+    display: inline-block;
+    /* h2 block element pura line niye nicche tai inline block korsi */
+}
+
+/*------------------
+ Header Styles
+ -------------------  */
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    /* align item: center korte hole must height thakte/dite hobe, height chara hoyna */
+}
+header{
+    /* height: 100vh;
+    eta background image shurute jeno pura page a thake tai disilam ekhon content boshano hoise so eta r dorkar nai */
+    background-image: url(../images/cloud.png);
+    /* background image dite url likhe ../ dile folder location ashbe */
+    background-repeat: no-repeat;
+    /* background image choto hoileo jeno repeat na kore */
+    background-size: cover;
+    /* full width niye nibe */
+    background-color: rgba(0, 0, 0, .5);
+    /* opesity deyar jonno rgba nisi 000 black color r .5 mane 50% */
+    background-blend-mode: overlay;
+    /* background image er shathe color ta overly korar jonno */
+}
+.navigation{
+    display: flex;
+}
+.navigation li{
+    list-style: none;
+    margin: 10px;
+}
+.navigation li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 80px);
+    /* 100vh mane full ekta page scrol chara r 80 px hoilo nav bar er height so total naav bar and banner milay 100vh korsi */
+}
+.banner-left{
+    display: flex;
+    /* khali flex korle pashapashe h p button chole ashbe tai flex direction column korbo */
+    flex-direction: column;
+    /* jehetu direction change hoye gese so align item daane bame kaj korbe and justify content korle upore niche kaj korbe */
+    /* Notes- Normaly align item upore niche kaj kore justify conment daane bame kaj kore */
+    justify-content: center;
+    /* vertically center hoise */
+    align-items: flex-start;
+}
+.banner-left h1{
+    font-size: 45px;
+    color: white;
+}
+.banner-left p{
+    font-size: 18px;
+    color: white;
+    margin: 20px 0;
+    line-height: 1.5;
+    /* line er por por gap default 1 thake amra baraite 1.5 disi */
+}
+.banner-right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* image take niche naimanor jonno */
+}
+
+.banner-right img{
+    width: 100%;
+}
+
+/* Feature part CSS */
+.feature{
+display: grid;
+grid-template-columns:  1fr 1fr;
+gap: 30px;
+justify-content: center;
+/* etar bhitoer card gular fixed width fixed thakay center nicchena */
+}
+.card{
+    width: 300px;
+    padding: 30px;
+    box-shadow: 0 30px 35px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    /* margin dane bame auto deyar por center nise */
+}
+.card .card-icon{
+    background-color: #FF008E;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    color: white;
+}
+.card h3{
+    color: #FF008E;
+    font-family: 25px;
+}
+.card p{
+    margin: 10px 0;
+    line-height: 1.5;
+    /* line gular gap baraite line height */
+}
+
+.card a{
+    text-decoration: none;
+    color: #FF008E;
+}
